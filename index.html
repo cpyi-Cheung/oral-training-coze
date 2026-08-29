@@ -25,6 +25,8 @@
   <div id="coze-chat-container"></div>
 
   <script>
+    const MY_TOKEN = 'pat_prHxsKPenQpScjkbHUn8RXbR26wcKonJtMKSRRKeeMbmmVEjbfDIsyv';
+
     new CozeWebSDK.WebChatClient({
       config: {
         bot_id: '7679294161668964362',
@@ -43,8 +45,10 @@
       },
       auth: {
         type: 'token',
-        token: 'pat_prHxsKPenQpScjkbHUn8RXbR26wcKonJtMKSRRKeeMbmmVEjbfDIsyv',
-        onAccessTokenLifespanExpire: () => {},
+        token: MY_TOKEN,
+        onRefreshToken: function () {
+          return MY_TOKEN;
+        }
       }
     });
   </script>
