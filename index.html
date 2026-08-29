@@ -1,19 +1,28 @@
 
-<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
-<script>
-  new CozeWebSDK.WebChatClient({
-    config: {
-      bot_id: '7679294161668964362',
-    },
-    componentProps: {
-      title: 'Coze',
-    },
-    auth: {
-      type: 'token',
-      token: 'pat_********',
-      onRefreshToken: function () {
-        return 'pat_********'
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小學中文口語訓練平台</title>
+  <!-- 扣子中國版 SDK 連結 -->
+  <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.20/libs/cn/index.js"></script>
+</head>
+<body>
+  <script>
+    new CozeWebSDK.WebChatClient({
+      config: {
+        bot_id: '7679294161668964362',
+      },
+      componentProps: {
+        title: '小學口語 AI 評分員',
+      },
+      auth: {
+        type: 'token',
+        token: 'pat_eVWiEgvRpLhDkacGolkZhe4sFWHtqh9O2pxHeLXqr2LHiT38fJyuvZRMFe6lcBfE',
+        onAccessTokenLifespanExpire: () => {},
       }
-    }
-  });
-</script>
+    });
+  </script>
+</body>
+</html>
